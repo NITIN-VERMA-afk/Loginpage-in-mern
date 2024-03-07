@@ -72,6 +72,10 @@ const Login = () => {
               <p>Don&apos;t have an account?</p>
               <Link to="/register">Register</Link>
             </div>
+            <div className="flex justify-center">
+              <p>forgot password?</p>
+              <Link to="/forrgot password">reset password</Link>
+            </div>
             <p>or</p>
             <div className="flex justify-center gap-2">
              
@@ -84,7 +88,7 @@ const Login = () => {
                     <FaFacebook />
                   </li>
                   <li>
-                    <FaApple />{" "}
+                    <FaApple />
                   </li>
                 </ul>
               </div>
