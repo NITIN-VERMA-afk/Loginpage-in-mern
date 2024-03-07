@@ -60,7 +60,6 @@ const Register = () => {
                 />
               </div>
               <div className="flex justify-center gap-5 flex-wrap">
-               
                 <div className="mb-3 flex justify-center items-center gap-4">
                   <label htmlFor="username">Enter your username</label>
                   <input
@@ -84,7 +83,7 @@ const Register = () => {
                     onChange={(e) => setUsername(e.target.value)}
                     required
                   />
-                </div>{" "}
+                </div>
               </div>
 
               <div className="flex justify-center flex-wrap gap-5">
@@ -136,6 +135,13 @@ const Register = () => {
                     required
                   />
                 </div>
+              </div>
+              <div className="flex justify-center">
+                <input type="checkbox" name="" id="" />
+                <p>
+                  By ticking,you are confirm that you have read,understand agree
+                  to our <Link>terms and conditions </Link>
+                </p>
               </div>
 
               <button
