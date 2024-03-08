@@ -11,7 +11,7 @@ const Login = () => {
   const [password, setPassword] = useState();
   const navigate = useNavigate();
 
-  const handlesubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     axios
@@ -41,7 +41,7 @@ const Login = () => {
           <div className="bg-white-500 p-3 rounded">
             <h1 className="mb-3 font-bold text-2xl">Login</h1>
 
-            <form handlesubmit={handlesubmit}>
+            <form  onSubmit={handleSubmit}>
               <div className="mb-3 flex flex-col">
                 <label className="text-start" htmlFor="emil">Enter your email</label>
                 <input
