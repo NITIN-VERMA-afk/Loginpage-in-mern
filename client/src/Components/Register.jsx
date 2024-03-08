@@ -17,7 +17,7 @@ const Register = () => {
     e.preventDefault();
 
     axios
-      .post("http://localhost:8000/register", { name, email, password })
+      .post("http://localhost:8000/api/v1/users/register", { name, email, password })
       .then((result) => {
         console.log(result);
         if (result.data === "Already registered") {
@@ -32,9 +32,9 @@ const Register = () => {
   };
   return (
     <>
-      <div>
+      <div className="">
         <div
-          className="d-flex justify-content-center align-items-center text-center vh-100"
+          className="flex justify-center items-center h-90"
           style={{
             backgroundImage:
               "linear-gradient(#00d5ff,#0095ff,rgba(93,0,255,.555))",
@@ -48,7 +48,7 @@ const Register = () => {
             </div>
 
             <form handleSubmit={handleSubmit}>
-              <div className="mb-3 flex justify-center items-center gap-4">
+              <div className="mb-3 flex  flex-col justify-center items-center">
                 <label htmlFor="emil">Enter your Name</label>
                 <input
                   type="text"
@@ -60,8 +60,8 @@ const Register = () => {
                 />
               </div>
               <div className="flex justify-center gap-5 flex-wrap">
-                <div className="mb-3 flex justify-center items-center gap-4">
-                  <label htmlFor="username">Enter your username</label>
+                <div className="mb-3 flex flex-col justify-center items-start">
+                  <label className="text-start" htmlFor="username">Enter your username</label>
                   <input
                     type="text"
                     placeholder="Enter your usename"
@@ -71,8 +71,8 @@ const Register = () => {
                     required
                   />
                 </div>
-                <div className="mb-3 flex justify-center items-center gap-4">
-                  <label className="" htmlFor="username">
+                <div className="mb-3 flex flex-col justify-center items-start">
+                  <label className="text-start" htmlFor="username">
                     Confirm your username
                   </label>
                   <input
@@ -87,7 +87,7 @@ const Register = () => {
               </div>
 
               <div className="flex justify-center flex-wrap gap-5">
-                <div className="mb-3 flex justify-center items-center gap-4">
+                <div className="mb-3 flex flex-col justify-center items-start">
                   <label htmlFor="emil">Enter your email</label>
                   <input
                     type="email"
@@ -98,7 +98,7 @@ const Register = () => {
                     required
                   />
                 </div>
-                <div className="mb-3 flex justify-center items-center gap-6">
+                <div className="mb-3 flex  flex-col justify-center items-start">
                   <label className="" htmlFor="emil">
                     Confirm your email
                   </label>
@@ -113,7 +113,7 @@ const Register = () => {
                 </div>
               </div>
               <div className="flex justify-center flex-wrap gap-5">
-                <div className="mb-3 flex justify-center items-center gap-3">
+                <div className="mb-3 flex flex-col justify-center items-start ">
                   <label htmlFor="emil">Enter your password</label>
                   <input
                     type="password"
@@ -124,7 +124,7 @@ const Register = () => {
                     required
                   />
                 </div>
-                <div className="mb-3 flex justify-center items-center gap-4">
+                <div className="mb-3 flex flex-col justify-center items-start">
                   <label htmlFor="emil">Confirm your password</label>
                   <input
                     type="password"

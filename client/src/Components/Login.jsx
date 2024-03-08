@@ -11,11 +11,11 @@ const Login = () => {
   const [password, setPassword] = useState();
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handlesubmit = (e) => {
     e.preventDefault();
 
     axios
-      .post("http://localhost:8000/login", { email, password })
+      .post("http://localhost:8000/api/v1/users/login", { email, password })
       .then((result) => {
         console.log(result);
         if (result.data === "Success") {
@@ -30,9 +30,9 @@ const Login = () => {
   };
   return (
     <>
-      <div>
+      <div className="flex justify-center items-center h-90">
         <div
-          className="d-flex justify-content-center align-items-center text-center vh-100"
+          className="w-80 flex justify-center align-middle "
           style={{
             backgroundImage:
               "linear-gradient(#00d5ff,#0095ff,rgba(93,0,255,.555))",
@@ -41,9 +41,9 @@ const Login = () => {
           <div className="bg-white-500 p-3 rounded">
             <h1 className="mb-3 font-bold text-2xl">Login</h1>
 
-            <form handleSubmit={handleSubmit}>
-              <div className="mb-3">
-                <label className="mr-6" htmlFor="emil">Enter your email :-</label>
+            <form handlesubmit={handlesubmit}>
+              <div className="mb-3 flex flex-col">
+                <label className="text-start" htmlFor="emil">Enter your email</label>
                 <input
                   type="email"
                   placeholder="Enter Email"
@@ -53,8 +53,8 @@ const Login = () => {
                   required
                 />
               </div>
-              <div className="mb-3">
-                <label htmlFor="password">Enter your password:-</label>
+              <div className="mb-3 flex flex-col">
+                <label className="text-start" htmlFor="password">Enter your password</label>
                 <input
                   type="password"
                   placeholder="Enter your password"
@@ -74,7 +74,7 @@ const Login = () => {
             </div>
             <div className="flex justify-center">
               <p>forgot password?</p>
-              <Link to="/forrgot password">reset password</Link>
+              <Link to="/">reset password</Link>
             </div>
             <p>or</p>
             <div className="flex justify-center gap-2">
